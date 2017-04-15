@@ -1,0 +1,6 @@
+c:\users\wecancodeit\documents\visual studio 2015\Projects\AccountProject\AccountProject\bin\Debug\AccountProject.exe.config
+c:\users\wecancodeit\documents\visual studio 2015\Projects\AccountProject\AccountProject\obj\Debug\AccountProject.csprojResolveAssemblyReference.cache
+c:\users\wecancodeit\documents\visual studio 2015\Projects\AccountProject\AccountProject\bin\Debug\AccountProject.exe
+c:\users\wecancodeit\documents\visual studio 2015\Projects\AccountProject\AccountProject\bin\Debug\AccountProject.pdb
+c:\users\wecancodeit\documents\visual studio 2015\Projects\AccountProject\AccountProject\obj\Debug\AccountProject.exe
+c:\users\wecancodeit\documents\visual studio 2015\Projects\AccountProject\AccountProject\obj\Debug\AccountProject.pdb
