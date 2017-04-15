@@ -14,8 +14,8 @@ namespace AccountProject
 
             //define variables
             int userOption;
-            int checkingStatus;
             
+
 
             //- [ ] View Client Information
             //- [ ] View Account Balance
@@ -28,24 +28,24 @@ namespace AccountProject
             //- [ ] From Checking Account
             //- [ ] From Savings Account
             //- [ ] Exit
+
+            Console.WriteLine("Welcome to The Interactive Bank of America. Please select an option so that I may assist you further");
+            Console.WriteLine();
+            Console.WriteLine("1. View Client Information");
+            Console.WriteLine("2. View Account Balance");
+            Console.WriteLine("3. Deposit Funds");
+            Console.WriteLine("4. Withdraw Funds");
+            Console.WriteLine("5. Exit");
+            Console.WriteLine();
             
-                Console.WriteLine("Welcome to The Interactive Bank of America. Please select an option so that I may assist you further");
-                Console.WriteLine("1. View Client Information");
-                Console.WriteLine("2. View Account Balance");
-                Console.WriteLine("3. Deposit Funds");
-                Console.WriteLine("4. Withdraw Funds");
-                Console.WriteLine("5. Exit");
-                Console.WriteLine();
-                
 
-                //use Parse to convert an integer to a string
-                userOption = int.Parse(Console.ReadLine());
-
-                //use case switch to give functionality to the user options
-               
+            //use Parse to convert an integer to a string
+            userOption = int.Parse(Console.ReadLine());
+        }
+            
 
 
         }
     }
-}
+
 
