@@ -10,6 +10,7 @@ namespace AccountProject
     {
         public string clientInformation;
         public string ViewAccountNumber;
+        public int accountBalance = 500;
 
 
         

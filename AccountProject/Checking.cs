@@ -8,13 +8,13 @@ namespace AccountProject
 {
     class Checking : Account
     {
-        int checkingAccountBalance; //define variable for use of checking account balance in this class
-                               //default is private
+        
         public void CheckingAccountNumber()
         {
             this.userAccountNumber = 123456789; //checking acct number
         }
 
+       
         
     }
 }

@@ -8,17 +8,21 @@ namespace AccountProject
 {
     public class Account
     {
+        public int accountBalance;
+       
         int userOption = int.Parse(Console.ReadLine());
+        int checkingOrSavings = int.Parse(Console.ReadLine());
+        
 
-        public float userAccountNumber; //declare for userAccountNumber...I made this protected so that derived classes
+        protected float userAccountNumber; //declare for userAccountNumber...I made this protected so that derived classes
                                            //can see the account number but it remains muteable
         public string checkingDeposit; //declare field for later use when usser makes a deposit to checking acct
                                        //public so that all classes can make a deposit
-        public string checkingWithdrawl; // field for later use when user makes a withdrawl from checking acct
+        protected string checkingWithdrawl; // field for later use when user makes a withdrawl from checking acct
                                             //protected so that derived classes can know what amount is, but not all
                                             //I thought of this like in the real world, deposits anyone can do, but
                                             //withdrawls have to be approached with another layer of privacy
-        public string savingsDeposit;//for later use when user makes a deposit to savings acct
+        protected string savingsDeposit;//for later use when user makes a deposit to savings acct
                                      //deposit made public for reason previously stated
         public string savingsWithdrawl;//for later use when usert makes a withdrawl from savings acct
                                           //withdrawl made protected for reason previously stated
@@ -41,14 +45,8 @@ namespace AccountProject
             Console.WriteLine("2. Savings Account");
             Console.WriteLine("3. Exit");
             Console.WriteLine();
-        }
-   
-
-        int checkingOrSavings = int.Parse(Console.ReadLine());
-   
-            
-        
-                   
+        }  
+                                  
             
         
         //Accounts (ALL Accounts should include the following)
@@ -58,9 +56,10 @@ namespace AccountProject
         //A way to view the current balance
         //User must be able to withdraw money from either account
 
-        public void viewAccountNumber()
+        public virtual void viewAccountNumber()
         {
             Console.WriteLine("Your account number is: " + userAccountNumber);
+            
         }
 
         public void CheckingDeposit()// this method will be used when user makes a deposit to checking deposit
