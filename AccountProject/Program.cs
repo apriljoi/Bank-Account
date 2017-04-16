@@ -13,17 +13,15 @@ namespace AccountProject
             Account yourAccount = new Account(); //instantiated new occurence of Account
 
             //define variables
-            int userOption;
+        public int userOption;
 
-            do
-            {
-                //- [ ] View Client Information
-                //- [ ] View Account Balance            
-                //- [ ] Deposit Funds          
-                //- [ ] Withdraw Funds          
-                //- [ ] Exit
+        //- [ ] View Client Information
+        //- [ ] View Account Balance            
+        //- [ ] Deposit Funds          
+        //- [ ] Withdraw Funds          
+        //- [ ] Exit
 
-                Console.WriteLine("Welcome to The Interactive Bank of America, better known as iBank. Please select an option so that we may assist you further");
+        Console.WriteLine("Welcome to The Interactive Bank of America, better known as iBank. Please select an option so that we may assist you further");
                 Console.WriteLine();
                 Console.WriteLine("1. View Client Information");
                 Console.WriteLine("2. View Account Balance");
@@ -33,17 +31,19 @@ namespace AccountProject
                 Console.WriteLine();
 
 
-                //use Parse to convert an integer to a string
+                //use Parse method to convert an integer to a string
                 userOption = int.Parse(Console.ReadLine());
-                Console.WriteLine();
-                Console.Clear();
+                Console.WriteLine();//I like to include a blank writeline method to help with spacing
+                                    //I believe that it provides for a better user experience
 
-            } while (userOption != 5);
-        }
-            
+                //Note to self: start with prefered switch case to provide functionality to menu, if doesn't work, use if else
+                }
+}
 
 
-        }
-    }
+
+
+
+    
 
 
