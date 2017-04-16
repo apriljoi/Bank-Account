@@ -8,9 +8,7 @@ namespace AccountProject
 {
     class Savings: Account
     {
-        int savingsAccountBalance;
-
-        public void SavingsAccountNumber()
+     public void SavingsAccountNumber()
         {
             this.userAccountNumber = 987654321;//savings acct number
         }

@@ -8,11 +8,7 @@ namespace AccountProject
 {
     public class Account
     {
-        public int accountBalance;
-       
-        int userOption = int.Parse(Console.ReadLine());
-        int checkingOrSavings = int.Parse(Console.ReadLine());
-        
+        public int accountBalance;             
 
         protected float userAccountNumber; //declare for userAccountNumber...I made this protected so that derived classes
                                            //can see the account number but it remains muteable
@@ -25,7 +21,10 @@ namespace AccountProject
         protected string savingsDeposit;//for later use when user makes a deposit to savings acct
                                      //deposit made public for reason previously stated
         public string savingsWithdrawl;//for later use when usert makes a withdrawl from savings acct
-                                          //withdrawl made protected for reason previously stated
+                                       //withdrawl made protected for reason previously stated
+
+       
+
 
         public void CheckingStatus()
 
@@ -45,10 +44,9 @@ namespace AccountProject
             Console.WriteLine("2. Savings Account");
             Console.WriteLine("3. Exit");
             Console.WriteLine();
-        }  
-                                  
-            
-        
+        }
+
+       
         //Accounts (ALL Accounts should include the following)
         //An account number
         //Balance
@@ -82,7 +80,9 @@ namespace AccountProject
             this.savingsWithdrawl = Console.ReadLine();
         }
 
-        
+        int userOption = int.Parse(Console.ReadLine());
+        int checkingOrSavings = int.Parse(Console.ReadLine());
+
 
     }
 }
