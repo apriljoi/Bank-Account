@@ -17,15 +17,15 @@ namespace AccountProject
             Console.WriteLine("Welcome to The Interactive Bank of America, better known as iBank. Please select an option so that we may assist you further");
             Console.WriteLine();
 
-            Console.WriteLine("Please enter your first and last name"); //gather the user name for client info to be used later
+            Console.Write("Please enter your first and last name: "); //gather the user name for client info to be used later
             string firstAndLastName = Console.ReadLine();
             firstAndLastName = firstAndLastName.ToUpper();
 
-            Console.WriteLine("Please enter your street address"); //gather user address for use later in client info
-            string userAddress = Console.ReadLine();
-            userAddress = userAddress.ToUpper();
+            Console.Write("Please enter your street address: "); //gather user address for use later in client info
+            string whereILive = Console.ReadLine();
+            whereILive = whereILive.ToUpper();
 
-            Console.WriteLine("Please enter your phone number in this format 000-000-0000"); //gather user phone # for use later in client info
+            Console.Write("Please enter your phone number in this format 000-000-0000: "); //gather user phone # for use later in client info
             string getTheDigits = Console.ReadLine();
             getTheDigits = getTheDigits.ToUpper();
        
@@ -36,6 +36,8 @@ namespace AccountProject
             //if doesn't work, use if else
 
 
+            Console.WriteLine("Please select an option so that we may assist you further");
+            Console.WriteLine();
             Console.WriteLine("1. View Client Information");  //- [ ] View Client Information
             Console.WriteLine("2. View Account Balance"); //- [ ] View Account Balance    
             Console.WriteLine("3. Deposit Funds"); //- [ ] Deposit Funds          
@@ -46,8 +48,19 @@ namespace AccountProject
             //use Parse method to convert an integer to a string
             int userOption = int.Parse(Console.ReadLine());
 
+           //constructor            
+         public ClientInformation( string firstAndLastName, string whereILive, string getTheDigits)
+        {
+            this.firstAndLastName = firstAndLastName;
+            this.whereILive = whereILive;
+            this.getTheDigits = getTheDigits;
+
+        }
+            
+
         }
 
+        
 
 
 
