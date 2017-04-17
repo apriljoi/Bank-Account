@@ -8,7 +8,7 @@ namespace AccountProject
 {
     class Checking : Account
     {
-        
+        int checkingAccountNumber = 123456789;
         public void CheckingAccountNumber()
         {
             this.userAccountNumber = 123456789; //checking acct number
