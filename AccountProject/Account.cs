@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 namespace AccountProject
 {
     public class Account
-    {
-
-        private int userAccountNumber;
-                                                                           
+    {                                                                                        
         public void MainMenu() //created method for main menu
         {
             Console.WriteLine("Thank you for entering in your information. We will use it to update your Client Profile. Please select an option so that we may assist you further");
@@ -31,9 +28,9 @@ namespace AccountProject
             Console.WriteLine("2. Savings Account");
             Console.WriteLine("3. Exit");
             Console.WriteLine();
-        }
-
+        }        
         int userOption = int.Parse(Console.ReadLine());
+      
         public void UserPicksCheckingOrSavings()
         {
             switch (userOption)
@@ -47,9 +44,15 @@ namespace AccountProject
             }
 
         }
+        int theUserAccountNumber;
+        public virtual void TheUserAccountNumber()
+        {
+            theUserAccountNumber = 123456789;
         }
 
     }
+
+}
 
 
         //Accounts (ALL Accounts should include the following)

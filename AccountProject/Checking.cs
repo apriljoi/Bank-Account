@@ -8,8 +8,9 @@ namespace AccountProject
 {
     class Checking : Account
     {
-        int checkingAccountNumber = 123456789;
-           
-                
+        
+        
+
+
     }
 }

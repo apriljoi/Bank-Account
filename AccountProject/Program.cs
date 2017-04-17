@@ -84,7 +84,11 @@ namespace AccountProject
         //Note to self: start with prefered switch case to provide functionality to menu, 
         //if doesn't work, use if else
 
-        //constructor //note to self; this actually belongs in the account class
+        //constructor //note to self; this probably belongs in the account class
+        public void Account()//default constructor
+        {
+
+        }
         public virtual void Account(string firstAndLastName, string whereILive, string getTheDigits, int howMuchMoneyDoIHave)
         {
             this.firstAndLastName = firstAndLastName;

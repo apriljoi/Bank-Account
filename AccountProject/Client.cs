@@ -73,6 +73,10 @@ namespace AccountProject
         
         //constructor
         //1/1 constructor required...
+        public void Account()//default constructor
+        {
+
+        }
         public void Account(string firstAndLastName, string whereILive, string getTheDigits)
         {
             this.firstAndLastName = firstAndLastName;

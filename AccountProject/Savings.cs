@@ -8,8 +8,11 @@ namespace AccountProject
 {
     class Savings: Account
     {
-        int savingsAccountNumber = 987654321;
+        int theUserAccountNumber;
 
-        
+        public override void TheUserAccountNumber()
+        {
+            theUserAccountNumber = 987654321;
+        }
     }
 }
