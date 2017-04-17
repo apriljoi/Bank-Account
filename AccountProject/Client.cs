@@ -8,23 +8,23 @@ namespace AccountProject
 {
     class Client
     {
+        //Client Class
+        //3 properties
+        //1 constructor
+        //1 method
+        //Client information should be filled in here
+
+         //fields
         private string firstAndLastName;
         private string whereILive;
         private string getTheDigits;
         private string typesOfAccountsIHave;
 
-        //This class will populate the client class. As of now, I know nothing about databases, but this would 
-        //be a perfect opportunity to be able to redo this project once databases are learned. If this were an 
-        //actual account, this information would be kept in a database. For now, I will get user input for 
-        //this information and repeat it back to the customer after all input is recieved...
-
-
-        //This was my template from class for properties...Since I am just using this information for later, 
-        //I just used a get not a set
-        //public int Seats
-        //{
-        //  get { return this.seats; }
-        //}
+      
+        //Properties...4/3 required
+        //These properties will be used to get the Client information that is required for this project
+        //I took the route of getting user input for this information to make it seem more realistic. If 
+        //I had SQL or databases in my toolbox, this information would be collected from a database.
 
         public string FirstAndLastName
         {
@@ -53,19 +53,25 @@ namespace AccountProject
                 
         
         //constructor
-        public void Account(string firstAndLastName, string whereILive, string getTheDigits, string typesofAccountsIHave)
+        //1/1 constructor required...
+        public void Account(string firstAndLastName, string whereILive, string getTheDigits)
         {
             this.firstAndLastName = firstAndLastName;
             this.whereILive = whereILive;
-            this.getTheDigits = getTheDigits;     
-                 
+            this.getTheDigits = getTheDigits;           
+                           
          }
-
-
-
-
-    //public string ViewAccountNumber;
-    //public int accountBalance = 500;
+          
+        //method
+        public void ClientProfileInformation()
+        {
+            Console.WriteLine("Name: " + firstAndLastName);
+            Console.WriteLine("Address: " + whereILive);
+            Console.WriteLine("Phone Number: " + getTheDigits);
+            Console.WriteLine("Accounts: " + TypesOfAccountsIHave);
+            
+        }
+    
 
 
 

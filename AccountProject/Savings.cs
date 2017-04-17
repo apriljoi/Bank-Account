@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 namespace AccountProject
 {
     class Savings: Account
-    {
-        int savingsAccountNumber;
+    {        
      public void SavingsAccountNumber()
         {
-            this.userAccountNumber = 987654321;//savings acct number
+            this.UserAccountNumber = 987654321;//savings acct number
         }
 
         
