@@ -31,71 +31,43 @@ namespace AccountProject
 
         static void Main(string[] args)
         {
-            Account yourAccount = new Account(); //instantiated new occurence of Account
+            Account myAccount = new Account(); //instantiated new occurence of Account
+            Checking myChecking = new Checking();
+            Savings mySavings = new Savings();
+            Client theClient = new Client();
 
-            //Greeting for the user
-            Console.WriteLine("Welcome to The Interactive Bank of America, better known as iBank. Please answer the Client Profile questions to make sure that we have the most up to date information on file");
-            Console.WriteLine();
-
-            Console.Write("Please enter your first and last name: "); //gather the user name for client info to be used later
-            string firstAndLastName = Console.ReadLine();
-            firstAndLastName = firstAndLastName.ToUpper();
-
-            Console.Write("Please enter your street address: "); //gather user address for use later in client info
-            string whereILive = Console.ReadLine();
-            whereILive = whereILive.ToUpper();
-
-            Console.Write("Please enter your phone number in this format 000-000-0000: "); //gather user phone # for use later in client info
-            string getTheDigits = Console.ReadLine();
-            getTheDigits = getTheDigits.ToUpper();
-
-            Console.WriteLine();//I like to include a blank writeline method to help with spacing
-                                //I believe that it provides for a better user experience
-
-            Console.WriteLine("Thank you for entering in your information. We will use it to update your Client Profile. Please select an option so that we may assist you further");
-            Console.WriteLine();
-            Console.WriteLine("1. View Client Information");  //- [ ] View Client Information
-            Console.WriteLine("2. View Account Balance"); //- [ ] View Account Balance    
-            Console.WriteLine("3. Deposit Funds"); //- [ ] Deposit Funds          
-            Console.WriteLine("4. Withdraw Funds"); //- [ ] Withdraw Funds   
-            Console.WriteLine("5. Exit"); //- [ ] Exit
-            Console.WriteLine();
+            theClient.GetUserInputForClientProfile();
+            
+            myAccount.MainMenu();
+            
+            //use Parse method to convert an integer to a string
             int userOption = int.Parse(Console.ReadLine());
             Console.WriteLine();
-            //use Parse method to convert an integer to a string
-
-            
 
             switch (userOption) //Note to self...should this be in the Account class to allow derived classes to inherit? 
                                 //I might have to change this later
             {
                 case 1:
-                    ClientProfileInformation();
+                    theClient.ClientProfileInformation();
+                    
                 break;
 
                 case 2:
-                Console.WriteLine("Which iBank Account would you like to use for your previously selected transaction?\n");
-                Console.WriteLine("1. Checking Account");
-                Console.WriteLine("2. Savings Account");
-                Console.WriteLine("3. Exit");
-                Console.WriteLine();
+                    myAccount.CheckingorSavings();
+                    myAccount.UserPicksCheckingOrSavings();
                 break;
 
                 case 3:
-                Console.WriteLine("Which iBank Account would you like to use for your previously selected transaction?\n");
-                Console.WriteLine("1. Checking Account");
-                Console.WriteLine("2. Savings Account");
-                Console.WriteLine("3. Exit");
-                Console.WriteLine();
-                break;
+                    myAccount.CheckingorSavings();
+                    myAccount.UserPicksCheckingOrSavings();
+
+                    break;
 
                 case 4:
-                Console.WriteLine("Which iBank Account would you like to use for your previously selected transaction?\n");
-                Console.WriteLine("1. Checking Account");
-                Console.WriteLine("2. Savings Account");
-                Console.WriteLine("3. Exit");
-                Console.WriteLine();
-                break;
+                    myAccount.CheckingorSavings();
+                    myAccount.UserPicksCheckingOrSavings();
+
+                    break;
 
                 case 5:
                     Console.WriteLine("Thank you for banking with iBank of America. Be Well");
@@ -107,10 +79,7 @@ namespace AccountProject
           
         }
 
-        private static void ClientProfileInformation()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         //Note to self: start with prefered switch case to provide functionality to menu, 
         //if doesn't work, use if else

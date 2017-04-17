@@ -8,34 +8,47 @@ namespace AccountProject
 {
     public class Account
     {
+
         private int userAccountNumber;
-     
-
-        public int UserAccountNumber
+                                                                           
+        public void MainMenu() //created method for main menu
         {
-            get
-            {
-                return UserAccountNumber;
-            }
-
-            set
-            {
-                UserAccountNumber1 = value;
-            }
+            Console.WriteLine("Thank you for entering in your information. We will use it to update your Client Profile. Please select an option so that we may assist you further");
+            Console.WriteLine();
+            Console.WriteLine("1. View Client Information");  //- [ ] View Client Information
+            Console.WriteLine("2. View Account Balance"); //- [ ] View Account Balance    
+            Console.WriteLine("3. Deposit Funds"); //- [ ] Deposit Funds          
+            Console.WriteLine("4. Withdraw Funds"); //- [ ] Withdraw Funds   
+            Console.WriteLine("5. Exit"); //- [ ] Exit
+            Console.WriteLine();           
+        }
+       
+        //created method for submenu option allowing user to choose which account they wanted 
+        public void CheckingorSavings()
+        {
+            Console.WriteLine("Which iBank Account would you like to use for your previously selected transaction?\n");
+            Console.WriteLine("1. Checking Account");
+            Console.WriteLine("2. Savings Account");
+            Console.WriteLine("3. Exit");
+            Console.WriteLine();
         }
 
-        public int UserAccountNumber1
+        int userOption = int.Parse(Console.ReadLine());
+        public void UserPicksCheckingOrSavings()
         {
-            get
+            switch (userOption)
             {
-                return userAccountNumber;
+                case 1:
+                    Console.WriteLine("You have selected your iBank checking account.");
+                    break;
+                case 2:
+                    Console.WriteLine("You have selected your iBank savings account");
+                    break;
             }
 
-            set
-            {
-                userAccountNumber = value;
-            }
         }
+        }
+
     }
 
 
@@ -49,5 +62,5 @@ namespace AccountProject
         
       
 
-    }
+    
 

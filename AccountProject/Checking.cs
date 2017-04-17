@@ -8,7 +8,7 @@ namespace AccountProject
 {
     class Checking : Account
     {
-        public int userAccountNumber = 123456789;
+        int checkingAccountNumber = 123456789;
            
                 
     }
