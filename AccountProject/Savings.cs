@@ -6,21 +6,31 @@ using System.Threading.Tasks;
 
 namespace AccountProject
 {
-    class Savings: Account
+    class Savings: Account   
     {
-        int theUserAccountNumber;
-
-        public override void TheUserAccountNumber()//this is my attempt to use an override method...
-                                                   //I'm not sure that I executed this properly
+        int userOption = int.Parse(Console.ReadLine());
+        public void UserChoosesSavingsDeposit() //method for savings deposit
         {
-            theUserAccountNumber = 987654321;
+            if (userOption == 1)
+            {
+                Console.WriteLine("How much would you like to deposit?");
+                userOption = int.Parse(Console.ReadLine());
+            }
+            else
+                Console.WriteLine("How much would you like to deposit?");
+            userOption = int.Parse(Console.ReadLine());
         }
 
-        int userAccountBalance;
-        public override void UserAccountBalance()//this is my attempt to use an override method... 
-                                                //I'm not sure that I executed this properly
+        public void UserChoosesSavingsWithdrawl() //method for savings withdrawl
         {
-            userAccountBalance = 750;
+            if (userOption == 1)
+            {
+                Console.WriteLine("How much would you like to withdraw?");
+                userOption = int.Parse(Console.ReadLine());
+            }
+            else
+                Console.WriteLine("How much would you like to withdraw?");
+            userOption = int.Parse(Console.ReadLine());
         }
     }
 }

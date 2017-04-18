@@ -62,15 +62,14 @@ namespace AccountProject
 
                 case 2:
                     myAccount.CheckingorSavings();
-                    {
-                        myAccount.UserPicksCheckingOrSavings();
-                    }
+                   
                 break;
 
                 case 3:
                     myAccount.CheckingorSavings();
                     {
-                        myAccount.UserPicksCheckingOrSavings();
+                        myAccount.UserPicksCheckingOrSavings();                       
+                     
                     }
                     break;
 
@@ -78,6 +77,7 @@ namespace AccountProject
                     myAccount.CheckingorSavings();
                     {
                         myAccount.UserPicksCheckingOrSavings();
+                       
                     }
                     break;
 

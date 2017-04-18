@@ -39,7 +39,7 @@ namespace AccountProject
             switch (userOption)
             {
                 case 1:
-                    Console.ReadLine();
+                    Console.ReadLine();                 
                     break;
                 case 2:
                     Console.ReadLine();
@@ -47,38 +47,15 @@ namespace AccountProject
             }
         }
 
-            public void UserChoosesChecking()
-        {
-            if (userOption == 1)
-            {
-                Console.WriteLine("How much would you like to deposit?");
-                userOption = int.Parse(Console.ReadLine());
-            }
-            else
-                Console.WriteLine("How much would you like to deposit?");
-            userOption = int.Parse(Console.ReadLine());
-        }
+       
+
+      
+
+      
 
         }
 
-        //Accounts (ALL Accounts should include the following)
-        //An account number
         
-        public virtual void TheUserAccountNumber()
-        {
-            theUserAccountNumber = 123456789;
-        }
-        //Balance
-        
-        public virtual void UserAccountBalance()
-        {
-            userAccountBalance = 500;
-        }
-
-        //constructor
-
-        //Instantiate a new object of CheckingAccount class
-        //CheckingAccount checking1 = new CheckingAccount("12345", 22347961.77, "Lord Tyrion's Checking Account");
     }
 
 
