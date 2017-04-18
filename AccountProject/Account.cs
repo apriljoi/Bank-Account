@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 namespace AccountProject
 {
     public class Account
-    {                                                                                        
+    {
+        int userAccountBalance;
+        int theUserAccountNumber;
+
         public void MainMenu() //created method for main menu
         {
             Console.WriteLine("Thank you for entering in your information. We will use it to update your Client Profile. Please select an option so that we may assist you further");
@@ -30,34 +33,59 @@ namespace AccountProject
             Console.WriteLine();
         }        
         int userOption = int.Parse(Console.ReadLine());
-      
+
         public void UserPicksCheckingOrSavings()
         {
             switch (userOption)
             {
                 case 1:
-                    Console.WriteLine("You have selected your iBank checking account.");
+                    Console.ReadLine();
                     break;
                 case 2:
-                    Console.WriteLine("You have selected your iBank savings account");
+                    Console.ReadLine();
                     break;
             }
+        }
+
+            public void UserChoosesChecking()
+        {
+            if (userOption == 1)
+            {
+                Console.WriteLine("How much would you like to deposit?");
+                userOption = int.Parse(Console.ReadLine());
+            }
+            else
+                Console.WriteLine("How much would you like to deposit?");
+            userOption = int.Parse(Console.ReadLine());
+        }
 
         }
-        int theUserAccountNumber;
+
+        //Accounts (ALL Accounts should include the following)
+        //An account number
+        
         public virtual void TheUserAccountNumber()
         {
             theUserAccountNumber = 123456789;
         }
+        //Balance
+        
+        public virtual void UserAccountBalance()
+        {
+            userAccountBalance = 500;
+        }
 
+        //constructor
+
+        //Instantiate a new object of CheckingAccount class
+        //CheckingAccount checking1 = new CheckingAccount("12345", 22347961.77, "Lord Tyrion's Checking Account");
     }
 
-}
 
 
-        //Accounts (ALL Accounts should include the following)
-        //An account number
-        //Balance
+//need constructor in this class for project requirement...
+        
+        
         //An account type(savings or checking)
         //A way to view the current balance
         //User must be able to withdraw money from either account

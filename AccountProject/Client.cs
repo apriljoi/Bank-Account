@@ -19,7 +19,7 @@ namespace AccountProject
         public string whereILive;
         public string getTheDigits;
         public string typesOfAccountsIHave;
-
+       
         //Greeting for the user (method)
         public void GetUserInputForClientProfile()
         {
@@ -77,20 +77,28 @@ namespace AccountProject
         {
 
         }
-        public void Account(string firstAndLastName, string whereILive, string getTheDigits)
+        public Client(string firstAndLastName, string whereILive, string getTheDigits, string typesOfAccountsIHave)
         {
             this.firstAndLastName = firstAndLastName;
             this.whereILive = whereILive;
-            this.getTheDigits = getTheDigits;           
-                           
-         }
+            this.getTheDigits = getTheDigits;
+            this.typesOfAccountsIHave = typesOfAccountsIHave;
+        }
 
+        public Client()
+        {
+        }
+
+
+        // 1 method
+        //Client information should be filled in here
+        
         public void ClientProfileInformation()
         {
-            Console.WriteLine("Name: " + firstAndLastName);
-            Console.WriteLine("Address: " + whereILive);
-            Console.WriteLine("Phone Number: " + getTheDigits);
-            Console.WriteLine("Accounts: " + TypesOfAccountsIHave);
+            Console.WriteLine("Name: " + firstAndLastName);            
+            Console.WriteLine("Address: " + whereILive);            
+            Console.WriteLine("Phone Number: " + getTheDigits);            
+            Console.WriteLine("Accounts: " + typesOfAccountsIHave);
 
         }
 
