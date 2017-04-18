@@ -15,20 +15,8 @@ namespace AccountProject
 
         protected string whereILive;
         protected int howMuchMoneyDoIHave;
-        private static string typesOfAccountsIHave;
 
-        public static string TypesOfAccountsIHave //the lightbulb help feature helped me come to inserting this property
-        {                                           //Note to self, why does this work and could this have been included in another class?
-            get                                     //Gain further understanding of why this property works
-            {
-                return typesOfAccountsIHave;
-            }
-
-            set
-            {
-                typesOfAccountsIHave = value; //Note to self, what does the value keyword do?
-            }
-        }
+        public static int subUserOption { get; private set; }
 
         static void Main(string[] args)
         {
@@ -36,21 +24,58 @@ namespace AccountProject
             Checking myChecking = new Checking(); //instantiated new occurence of Checking Class
             Savings mySavings = new Savings(); //instantiated new occurence of Savings Class
             Client theClient = new Client(); //instantiated new occurrence of Client Class
-            //**instantiating these occurrences is making them exist so that the classes can talk and share information
+                                             //**instantiating these occurrences is making them exist so that the classes can talk and share information
 
-            theClient.GetUserInputForClientProfile();//calling method created for questions I created in order to 
-                                                       //get information for Client Profile. I challenged myself and 
-                                                       //gathered user input for Client Profile instead of hard coding profile
-            
-            myAccount.MainMenu();//calling method created for Main Menu. I finally caught on to methods and I 
-                                    //created methods for a couple of things that didn't really need methods.
-                                    //I was a little method happy in order to practice!
-            
+            Console.WriteLine("Thank you for entering in your information. We will use it to update your Client Profile. Please select an option so that we may assist you further");
+            Console.WriteLine();
+            Console.WriteLine("1. View Client Information");  //- [ ] View Client Information
+            Console.WriteLine("2. View Account Balance"); //- [ ] View Account Balance    
+            Console.WriteLine("3. Deposit Funds"); //- [ ] Deposit Funds          
+            Console.WriteLine("4. Withdraw Funds"); //- [ ] Withdraw Funds   
+            Console.WriteLine("5. Exit"); //- [ ] Exit
+            Console.WriteLine(); //I'm so glad that I learned a blank WriteLine will get me the desired spacing for
+                                 //user experience
+
             //use Parse method to convert an integer to a string
             int userOption = int.Parse(Console.ReadLine());
-            Console.WriteLine(); //I'm so glad that I learned a blank WriteLine will get me the desired spacing for
-                                    //user experience
+            if(userOption == 2)
+            {
+                myAccount.CheckingorSavings();
+                    if(subUserOption == 1)
+                    {
+                        Console.WriteLine("Your Checking Account Balance is: " + myAccount.checkingBalance);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your Savings Account Balance is: " + myAccount.savingsBalance);
+                }
 
+                if(userOption == 3)
+                {
+                    myAccount.CheckingorSavings();
+                        if(subUserOption == 1)
+                        {
+                            myAccount.CheckingDeposit();
+                        }
+                        else
+                        {
+                            myAccount.SavingsDeposit();
+                        }
+                }
+
+                if(userOption ==4)
+                {
+                    myAccount.CheckingorSavings();
+                        if(subUserOption ==1)
+                        {
+                            myAccount.CheckingWithdrawl();
+                        }
+                        else
+                        {
+                            myAccount.SavingsWithdrawl();
+                        }
+                }
+            }
             switch (userOption) //Note to self...should this be in the Account class to allow derived classes to inherit? 
                                 //I might have to change this later
                                 //Note to self: start with prefered switch case to provide functionality to menu, 
@@ -61,34 +86,23 @@ namespace AccountProject
                 break;
 
                 case 2:
-                    myAccount.CheckingorSavings();
-                   
+                    myAccount.CheckingorSavings();               
                 break;
 
                 case 3:
-                    myAccount.CheckingorSavings();
-                    {
-                        myAccount.UserPicksCheckingOrSavings();                       
-                     
-                    }
+                    myAccount.CheckingorSavings();                  
                     break;
 
                 case 4:
-                    myAccount.CheckingorSavings();
-                    {
-                        myAccount.UserPicksCheckingOrSavings();
-                       
-                    }
+                    myAccount.CheckingorSavings();                    
                     break;
 
                 case 5:
                     Console.WriteLine("Thank you for banking with iBank of America. Be Well");
                     break;
 
-
             }
-
-          
+            
         }
 
         //constructor //note to self; this probably belongs in the account class
@@ -104,8 +118,9 @@ namespace AccountProject
             this.howMuchMoneyDoIHave = howMuchMoneyDoIHave;
                         
         }
+       
 
-        
+
 
 
 

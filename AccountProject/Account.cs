@@ -8,21 +8,15 @@ namespace AccountProject
 {
     public class Account
     {
-        int userAccountBalance;
-        int theUserAccountNumber;
+        //I have 5 ReadLines that need to have a key entered into them before the program starts...
+        //I am unsure where these came from. I thought that I had some unnecessary readlines somewhere,
+        //but after getting rid of those readlines, the program still requires user input for 5 lines...
+        //As I continue to fix it, it gets worse, so note to self: figure out how 
+        // it happened and how NOT to make this happen again!
 
-        public void MainMenu() //created method for main menu
-        {
-            Console.WriteLine("Thank you for entering in your information. We will use it to update your Client Profile. Please select an option so that we may assist you further");
-            Console.WriteLine();
-            Console.WriteLine("1. View Client Information");  //- [ ] View Client Information
-            Console.WriteLine("2. View Account Balance"); //- [ ] View Account Balance    
-            Console.WriteLine("3. Deposit Funds"); //- [ ] Deposit Funds          
-            Console.WriteLine("4. Withdraw Funds"); //- [ ] Withdraw Funds   
-            Console.WriteLine("5. Exit"); //- [ ] Exit
-            Console.WriteLine();           
-        }
-       
+        public int savingsBalance;
+        public int checkingBalance;
+           
         //created method for submenu option allowing user to choose which account they wanted 
         public void CheckingorSavings()
         {
@@ -31,22 +25,61 @@ namespace AccountProject
             Console.WriteLine("2. Savings Account");
             Console.WriteLine("3. Exit");
             Console.WriteLine();
-        }        
-        int userOption = int.Parse(Console.ReadLine());
+        }
+        public int subUserOption = int.Parse(Console.ReadLine());
 
-        public void UserPicksCheckingOrSavings()
+        public int SubUserOption
         {
-            switch (userOption)
+            get
             {
-                case 1:
-                    Console.ReadLine();                 
-                    break;
-                case 2:
-                    Console.ReadLine();
-                    break;
+                return subUserOption;
+            }
+
+            set
+            {
+                subUserOption = value;
             }
         }
 
+
+        //methods to call account balances
+        public void SavingsAccountBalance()
+        {
+            savingsBalance = 1000;
+        }
+        public void CheckingAccountBalance()
+        {
+            checkingBalance = 500;
+        }
+
+
+        //methods for Deposits...I did attempt to create a virtual method for Deposit, that I could override in 
+        //derived classes, but it was not being read by the other classes...after many alterations in code, 
+        //i went with multiple methods to avoid errors and be able to run program...I do understand that this
+        //was a PERFECT opportunity to use the virtual and override access modifiers...
+        public void CheckingDeposit()
+        {
+            checkingBalance = checkingBalance + 25; //removed this. to simplify. I am already defining and calling
+        }                                           //this method in this class
+        public void SavingsDeposit()
+        {
+            savingsBalance = savingsBalance + 10;
+        }
+
+        //withdrawl methods...again, a PERFECT opportunity to use access modifiers
+        public void CheckingWithdrawl()
+        {
+            checkingBalance = checkingBalance -25;
+        }
+        public void SavingsWithdrawl()
+        {
+            savingsBalance = savingsBalance - 10;
+        }
+
+    }
+        
+        
+        
        
 
       
@@ -56,7 +89,7 @@ namespace AccountProject
         }
 
         
-    }
+    
 
 
 

@@ -9,7 +9,6 @@ namespace AccountProject
     class Checking : Account
     {
 
-        int userOption = int.Parse(Console.ReadLine());
 
         public void UserChoosesCheckingDeposit() //method for checking deposit
         {
@@ -34,6 +33,8 @@ namespace AccountProject
                 Console.WriteLine("How much would you like to withdraw?");
             userOption = int.Parse(Console.ReadLine());
         }
+        int userOption = int.Parse(Console.ReadLine());
+
         //Instantiate a new object of CheckingAccount class
         //CheckingAccount checking1 = new CheckingAccount("12345", 22347961.77, "Lord Tyrion's Checking Account");
 

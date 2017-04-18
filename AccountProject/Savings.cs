@@ -8,17 +8,14 @@ namespace AccountProject
 {
     class Savings: Account   
     {
-        int userOption = int.Parse(Console.ReadLine());
         public void UserChoosesSavingsDeposit() //method for savings deposit
         {
             if (userOption == 1)
             {
                 Console.WriteLine("How much would you like to deposit?");
-                userOption = int.Parse(Console.ReadLine());
             }
             else
                 Console.WriteLine("How much would you like to deposit?");
-            userOption = int.Parse(Console.ReadLine());
         }
 
         public void UserChoosesSavingsWithdrawl() //method for savings withdrawl
@@ -26,11 +23,12 @@ namespace AccountProject
             if (userOption == 1)
             {
                 Console.WriteLine("How much would you like to withdraw?");
-                userOption = int.Parse(Console.ReadLine());
             }
             else
                 Console.WriteLine("How much would you like to withdraw?");
-            userOption = int.Parse(Console.ReadLine());
+            
         }
+        int userOption = int.Parse(Console.ReadLine());
+
     }
 }
